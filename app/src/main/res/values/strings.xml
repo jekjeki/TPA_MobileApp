@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Caddo_TPA_Mobile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_menu_success">Success</string>
+    <string name="tab_menu_fail">Failed</string>
+    <string name="greet">Welcome</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_popular_products">Popular Products</string>
+    <string name="title_list_of_products">List of Products</string>
+    <string name="title_transaction_page">Transaction Page</string>
+    <string name="title_profile_fullName">Full Name</string>
+    <string name="title_profile_email">Email</string>
+    <string name="title_profile_address">Address</string>
+    <string name="update_profile_text">Update Profile</string>
+</resources>

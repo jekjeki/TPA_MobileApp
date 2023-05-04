@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "558720809635",
+    "project_id": "caddotpamobile",
+    "storage_bucket": "caddotpamobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558720809635:android:5fe10f5c8ab90f6c501d16",
+        "android_client_info": {
+          "package_name": "edu.bluejack22_2.Caddo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558720809635-jcd73kdujgk66s6ot8ou88799djak4a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDETxGTc5k4jerZ1MuBm5mkmizqaP-hPnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558720809635-jcd73kdujgk66s6ot8ou88799djak4a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

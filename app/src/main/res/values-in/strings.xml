@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caddo_TPA_Mobile</string>
+    <string name="hello_blank_fragment">hallo blank fragment</string>
+    <string name="tab_menu_success">Sukses</string>
+    <string name="tab_menu_fail">Gagal</string>
+    <string name="greet">Halo</string>
+    <string name="title_categories">List Kategori</string>
+    <string name="title_popular_products">Produk Terlaris</string>
+    <string name="title_list_of_products">List Produk</string>
+    <string name="title_transaction_page">List Transaksi</string>
+    <string name="title_profile_fullName">Nama Lengkap</string>
+    <string name="title_profile_email">Email</string>
+    <string name="title_profile_address">Alamat</string>
+    <string name="update_profile_text">Perbaharui Profil</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caddo_TPA_Mobile</string>
+    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
+    <string name="tab_menu_success">نجاح</string>
+    <string name="tab_menu_fail">فشل</string>
+    <string name="greet">مرحباً</string>
+    <string name="title_categories">فئات</string>
+    <string name="title_popular_products">المنتجات الشعبية</string>
+    <string name="title_list_of_products">قائمة المنتجات</string>
+    <string name="title_transaction_page">صفحة المعاملات</string>
+    <string name="title_profile_fullName">الاسم الكامل</string>
+    <string name="title_profile_email">بريد إلكتروني</string>
+    <string name="title_profile_address">عنوان</string>
+    <string name="update_profile_text">تحديث الملف</string>
+</resources>
