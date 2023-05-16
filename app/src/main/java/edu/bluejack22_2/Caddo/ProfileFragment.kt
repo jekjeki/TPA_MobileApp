@@ -2,6 +2,7 @@ package edu.bluejack22_2.Caddo
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
@@ -18,6 +20,7 @@ import com.google.firebase.ktx.Firebase
 import edu.bluejack22_2.Caddo.Model.User
 import edu.bluejack22_2.Caddo.Model.UserReadModel
 import edu.bluejack22_2.Caddo.ViewModel.ProfileViewModel
+import java.util.*
 
 
 class ProfileFragment : Fragment() {
@@ -33,6 +36,11 @@ class ProfileFragment : Fragment() {
     private lateinit var tvTitleAddress : TextView
 
     private lateinit var profileViewModel : ProfileViewModel
+
+    private lateinit var progressCircular : ProgressBar
+
+    private var i = 0
+    private val handler = Handler()
 
     private var documentId = ""
     private var userPassword = ""
@@ -50,11 +58,15 @@ class ProfileFragment : Fragment() {
 
         profileViewModel = ViewModelProviders.of(this)[ProfileViewModel::class.java]
 
+
+        profileViewModel.getCurrentUserProfileData()
+
         getUsers()
 
         tvTitleFullName = view.findViewById(R.id.title_full_name)
         tvTitleEmail = view.findViewById(R.id.title_email)
         tvTitleAddress = view.findViewById(R.id.title_profile_address)
+        progressCircular = view.findViewById(R.id.progress_circular)
 
         ivProfile = view.findViewById(R.id.iv_profile_page)
         tvProfileName = view.findViewById(R.id.tv_profile_name)
@@ -62,12 +74,51 @@ class ProfileFragment : Fragment() {
         tvProfileAddress = view.findViewById(R.id.tv_profile_address)
         btnUpdateProfile = view.findViewById(R.id.btn_update_profile)
 
+        // make the component invisible
+//            ivProfile.visibility = View.INVISIBLE
+        tvProfileName.visibility = View.INVISIBLE
+        tvProfileEmail.visibility = View.INVISIBLE
+        tvProfileAddress.visibility = View.INVISIBLE
+       
+
+
+        // set progress bar
+        i = progressCircular.progress
+        Thread(Runnable {
+
+            progressCircular.visibility = View.VISIBLE
+
+            while (i < 25){
+                i += 1
+                handler.post(Runnable {
+                    progressCircular.progress = i
+                })
+
+                try {
+                    Thread.sleep(100)
+                } catch (e : InterruptedException){
+
+                }
+            }
+
+            // set progress bar invisible
+            progressCircular.visibility = View.INVISIBLE
+
+
+        }).start()
+
+
+        //ivProfile.visibility = View.VISIBLE
+        tvProfileName.visibility = View.VISIBLE
+        tvProfileEmail.visibility = View.VISIBLE
+        tvProfileAddress.visibility = View.VISIBLE
+
         // tv connect with string
         tvTitleFullName.text = getString(R.string.title_profile_fullName)
         tvTitleEmail.text = getString(R.string.title_profile_email)
         tvTitleAddress.text = getString(R.string.title_profile_address)
 
-        profileViewModel.getCurrentUserProfileData()
+
 
         Glide.with(this).load(R.drawable.baseline_person_24).into(ivProfile)
 
@@ -111,3 +162,4 @@ class ProfileFragment : Fragment() {
 
 
 }
+

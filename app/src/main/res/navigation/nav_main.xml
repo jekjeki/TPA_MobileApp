@@ -25,9 +25,4 @@
         android:name="edu.bluejack22_2.Caddo.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="edu.bluejack22_2.Caddo.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
 </navigation>

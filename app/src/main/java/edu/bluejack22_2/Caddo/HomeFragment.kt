@@ -56,7 +56,6 @@ class HomeFragment : Fragment() {
 
         categoriesList = arrayListOf()
         popularProductList = arrayListOf()
-
         listImgData()
         retrieveCategoryData()
         getPopularProducts()

@@ -28,7 +28,7 @@ class DetailViewModel:ViewModel() {
     }
 
     fun setProductQty(newProductQty : String):String{
-        return "Product qty: $newProductQty kg"
+        return "Product quantity: $newProductQty pcs"
     }
 
     fun setProductStatus(newProductStatus : String):String{
